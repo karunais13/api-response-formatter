@@ -4,7 +4,7 @@ namespace Karu\ApiResponse\Helpers;
 
 use Exception;
 
-class ApiResponse
+class ApiResponseHelper
 {
     public function res( $succeeded, $code = 0, $objects = [] ): ?array
     {
