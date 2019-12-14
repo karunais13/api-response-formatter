@@ -1,0 +1,34 @@
+{
+    "name": "karu/api-response-formatter",
+    "description": "Structure api response",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Karunaiswaran",
+            "email": "karunais1392@gmail.com"
+        }
+    ],
+    "require": {
+        "php" : ">=5.4.0"
+    },
+    "require-dev" : {
+        "phpunit/phpunit" : ">=4.0",
+        "mockery/mockery" : "dev-master"
+    },
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "Karu\\ApiResponse\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Karu\\ApiResponse\\ApiResponseProvider"
+            ],
+            "aliases": {
+                "ApiResponse": "Karu\\ApiResponse\\Facades\\ApiResponseFacade"
+            }
+        }
+    }
+}
