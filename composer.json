@@ -2,6 +2,7 @@
     "name": "karu/api-response-formatter",
     "description": "Structure api response",
     "type": "library",
+    "license" : "MIT",
     "authors": [
         {
             "name": "Karunaiswaran",
