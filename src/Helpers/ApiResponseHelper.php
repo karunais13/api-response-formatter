@@ -54,7 +54,7 @@ class ApiResponseHelper
     {
         $messages   = config('apiResponse.message');
 
-        return $messages[$code] ?? __('');
+        return $messages[$code] ? __($messages[$code]) : __('');
     }
 
 }
