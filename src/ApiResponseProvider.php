@@ -25,7 +25,7 @@ class ApiResponseProvider extends ServiceProvider
     public function boot()
     {
         $this->publishes([
-            __DIR__ . '/config/apiResponse.php' => config_path('apiResponse.php'),
+            __DIR__ . '/config/responsecode.php' => config_path('responsecode.php'),
         ]);
     }
 }

@@ -6,7 +6,13 @@ use Exception;
 
 class ApiResponseHelper
 {
-    public function res( $succeeded, $code = 0, $objects = [] ): ?array
+    /**
+     * @param $succeeded
+     * @param int $code
+     * @param array $objects
+     * @return array|null
+     */
+    public function res($succeeded, $code = 0, $objects = [] ): ?array
     {
         try {
 
@@ -28,7 +34,13 @@ class ApiResponseHelper
         }
     }
 
-    public function resCustom( $succeeded, $message = '', $objects = [] ): array
+    /**
+     * @param $succeeded
+     * @param string $message
+     * @param array $objects
+     * @return array
+     */
+    public function resCustom($succeeded, $message = '', $objects = [] ): array
     {
         return [
             'succeeded'		=> $succeeded,
@@ -38,7 +50,11 @@ class ApiResponseHelper
         ];
     }
 
-    public function validatorMessages( $attributes ): string
+    /**
+     * @param $attributes
+     * @return string
+     */
+    public function validatorMessages($attributes ): string
     {
         $cMessage	= '';
         foreach( $attributes as $messages ){
@@ -50,9 +66,13 @@ class ApiResponseHelper
         return $cMessage;
     }
 
-    public function getMessageByCode( $code = 0 )
+    /**
+     * @param int $code
+     * @return array|string|null
+     */
+    public function getMessageByCode($code = 0 )
     {
-        $messages   = config('apiResponse.message');
+        $messages   = config('responsecode.message');
 
         return $messages[$code] ? __($messages[$code]) : __('');
     }
